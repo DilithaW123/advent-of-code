@@ -9,7 +9,7 @@ fn process_history(parent_vec: &Vec<i64>) -> i64 {
         child_vec.push(val);
     }
     if only_zeroes {
-        return parent_vec.last().unwrap().clone();
+        return parent_vec.first().unwrap().clone();
     }
     let val = parent_vec.first().unwrap() - process_history(&child_vec);
     return val;
